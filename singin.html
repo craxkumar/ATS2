@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <style>
+        #div2{
+            background-color:blue;
+            height: 50px;
+            
+        }
+        
+        nav a{
+            
+            font-size: larger;
+            text-decoration: none;
+            color:darkkhaki;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            border-style: solid;
+            border-radius: 10%;
+            margin: 20px;
+            padding: 3px;
+            position: relative;
+            top:14px;
+            background-color: black;
+            /* border-top-width: 10px; */
+            /* margin: 10px 10px 10px 10px;
+            padding:10px 10px 10px 10px; */  
+        }
+        #div1{
+            background-color: black;
+            color:chartreuse;
+            text-align: center;
+            font-size: 300%;
+            height: 50px;
+        }
+        fieldset {
+            background-color: #eeeeee;
+            width: 300px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="div1">AIR LINE TICKETING SYSYTEM</div>
+    <div id="div2">
+        <nav>
+            <a href="main.html" >Home</a>
+            <a href="#">About us</a>
+            <a href="singin.html">sign up</a>
+            <a href="login.html">log in</a>
+        </nav>
+    </div>
+    <br><br>
+    <center>
+    <fieldset >
+        <legend>create user form</legend>
+            <table >
+                <tr>
+                    <td>Username: </td>
+                    <td><input type="text" id="newuser"/></td>
+                </tr>
+                <tr>
+                    <td>password: </td>
+                    <td><input type="text" id="newpass" /></td>
+                </tr>
+                <tr >
+                    <td colspan="2" style="text-align: center;">
+                        <button onclick="AirlineTicketing.adduser()">create user</button>
+                    </td>
+    
+                </tr>  
+        </table>
+    </fieldset>
+   </center>
+
+
+   <script src="userValidation.js" ></script>
+   <script src="booking.js"></script>
+   <script src="passangerDetails.js"></script>
+    
+</body>
+</html>

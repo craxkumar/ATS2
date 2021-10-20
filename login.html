@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+
+    <style>
+        #div2{
+            background-color:blue;
+            height: 50px;
+            
+        }
+        
+        nav a{
+            
+            font-size: larger;
+            text-decoration: none;
+            color:darkkhaki;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            border-style: solid;
+            border-radius: 10%;
+            margin: 20px;
+            padding: 3px;
+            position: relative;
+            top:14px;
+            background-color: black;
+
+        }
+        
+        #div1{
+
+            background-color: black;
+            color:chartreuse;
+            text-align: center;
+            font-size: 300%;
+            height: 50px;
+
+        }
+        fieldset{
+            width: 400px;
+        }
+        #menu,#passDetails{
+            display: none;
+        }
+        /* @media screen and (min-width: 480px) {
+            #div1,#div2 {
+                width: 1000px;
+                font-size: 30px;
+            }
+        } */
+        
+    </style>
+</head>
+
+<body>
+    <div id="div1">AIR LINE TICKETING SYSYTEM</div>
+
+    <div id="div2">
+
+        <nav>
+            <a href="main.html" >Home</a>
+            <a href="#">About us</a>
+            <a href="singin.html">sign up</a>
+            <a href="login.html">log in</a>
+        
+        </nav>
+
+    </div>
+
+    <center>
+        <div id="div3" >
+            <fieldset>
+                <legend >log in form</legend>
+                <center>
+                    <table>
+                        <tr>
+                            <td>Username: </td>
+                            <td><input type="text" id = "user"></td>
+                        </tr>
+                        <tr>
+                            <td>password: </td>
+                            <td><input type="text" id = "pass"></td>
+                        </tr>
+                        <tr >
+                            <td colspan="2" style="text-align: center;">
+                                <button onclick="AirlineTicketing.validate()">log in</button>
+                            </td>
+            
+                        </tr>
+                    </table>
+                </center>
+            </fieldset>
+        </div>
+    </center>
+    <br>
+    <br>
+    <center>
+        <div id="menu" >
+            <fieldset>
+                <legend>choose option</legend>
+                <table >
+                    <tr>
+                        <td>Enter 1. To Book a new flight
+                         </td>
+                    </tr>
+                    <tr>
+                        <td>Enter 2. Booking Details </td>
+                    </tr>
+                    <tr>
+                     <td>Enter 3. Passenger Details</td>
+                    </tr>
+                    <tr>
+                        <td>
+                         Enter 4. To Delete the Passenger 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                         Enter 5. Exit
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Enter valid number: <input id="validoption" type="text" /></td>
+                    </tr>
+                    <tr >
+                        <td colspan="2" style="text-align: center;">
+                            <button onclick="booking.enterBookingDetails()">submit</button>
+                        </td>
+        
+                    </tr>
+                </table>
+            </fieldset>
+           
+        </div>
+    </center>
+
+    <center>
+        <div id= "enterbooking" style="display: none;">
+            <fieldset>
+                <legend>enter Booking details</legend>
+                <table>
+                    <tr>
+                        <td>flight id: </td>
+                        <td> 
+                            <select id="fid">
+                                <option> 235: HYD - MIB</option>
+                                <option> 578: GOA - DL</option>
+                                <option> 126: TN - UK</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>class : </td>
+                        <td> 
+                            <select id="class">
+                                <option>B : business</option>
+                                <option>E : economy</option>
+                                <option>F : first class</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>date of journey: </td>
+                        <td><input type="date" id="doj"></td>
+                    </tr>
+
+                    <tr>
+                        <td>no. of adults</td>
+                        <td><input type="number" id="noofadults"/></td>
+                    </tr>
+
+                    <tr>
+                        <td>no. of childern</td>
+                        <td><input type="number" id="noofchildren"/></td>
+                    </tr>
+
+                    <tr >
+                        <td colspan="2" style="text-align: center;">
+                            <button onclick="booking.gettingBookingDetails()">submit</button>
+                        </td>
+        
+                    </tr>
+
+                </table>
+            </fieldset>
+        </div>
+    </center>
+
+    <center>
+        <div id="passDetails">
+            <fieldset>
+                <legend>passanger Details</legend>
+                <table>
+                    <tr>
+                        <td> Enter Passanger Name: </td>
+                        <td> <input type="text" id="pname"/></td>
+                    </tr>
+                    <tr>
+                        <td> Enter Passanger Age: </td>
+                        <td> <input type="number" id="age"/></td>
+                    </tr>
+
+                    <tr >
+                        <td colspan="2" style="text-align: center;">
+                            <button onclick="passanger.gettingPassangerDetails()">submit</button>
+                        </td>
+        
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+    </center>
+    
+    <script src="userValidation.js" ></script>
+    <script src="booking.js"></script>
+    <script src="passangerDetails.js"></script>
+</body>
+
+</html>
